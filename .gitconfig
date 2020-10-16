@@ -1,0 +1,46 @@
+[user]
+	name = Roman Schejbal
+	email = schejbalroman@gmail.com
+[alias]
+  # shortcuts
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  fepo = fetch --prune origin
+  poh = push origin HEAD
+  who = shortlog -s --
+
+  # count the number of lines attributed to each author
+  blame = git-blame --line-porcelain file | sed -n 's/^author //p' | sort | uniq -c | sort -rn
+
+  ls = log --first-parent --pretty=format:"%C(yellow)%h\\ %Cred%d\\ %Creset%s\\ %C(green)(%cr)\\ %Cblue[%cn]" --decorate --date=relative
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+  # show latest
+  latest-branches = for-each-ref --sort=-committerdate refs/heads/
+
+  # http://haacked.com/archive/2014/07/28/github-flow-aliases/
+  cm = !git add -A && git commit -m
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  cob = checkout -b
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  wip = !git add -A && git commit -m 'WIP'
+  undo = reset HEAD~1 --mixed
+  amend = commit -a --amend
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[push]
+  default = current
+[core]
+  autocrlf = input
+[pull]
+  rebase = true
