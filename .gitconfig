@@ -12,7 +12,7 @@
   fepo = fetch --prune origin
   poh = push origin HEAD
   who = shortlog -s --
-  polish = git commit -m "💅"
+  polish = commit -m "💅"
 
   # count the number of lines attributed to each author
   blame = git-blame --line-porcelain file | sed -n 's/^author //p' | sort | uniq -c | sort -rn
