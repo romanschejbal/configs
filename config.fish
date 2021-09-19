@@ -1,8 +1,10 @@
-# FNM stuff
-fnm env --multi | source
+eval (/opt/homebrew/bin/brew shellenv)
 
 # RUST
-source $HOME/.cargo/env
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+
+# FNM stuff
+fnm env | source
 
 # autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
