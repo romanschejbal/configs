@@ -45,6 +45,6 @@
 [core]
   autocrlf = input
 [pull]
-  rebase = true
+	rebase = true
 [init]
   defaultBranch = main
