@@ -1,6 +1,8 @@
 brew "autojump"
+brew "bandwhich"
 brew "bat"
 brew "bottom"
+brew "broot"
 brew "difftastic"
 brew "dust"
 brew "exa"
