@@ -20,6 +20,7 @@ brew "starship"
 brew "tmux"
 brew "wget"
 brew "youtube-dl"
+brew "zoxide"
 
 cask "docker"
 cask "dropbox"
