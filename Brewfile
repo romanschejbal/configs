@@ -22,6 +22,7 @@ brew "wget"
 brew "youtube-dl"
 brew "zoxide"
 brew "rustscan"
+brew "gping"
 
 cask "docker"
 cask "dropbox"
