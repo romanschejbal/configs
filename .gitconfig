@@ -13,6 +13,8 @@
   poh = push origin HEAD
   who = shortlog -s --
   polish = commit -m "💅"
+  rbi = "!f() { git rebase -i $1; }; f"
+  rbih = "!f() { git rebase -i HEAD~$1; }; f"
 
   # count the number of lines attributed to each author
   blame = git-blame --line-porcelain file | sed -n 's/^author //p' | sort | uniq -c | sort -rn
@@ -45,8 +47,8 @@
 [core]
   autocrlf = input
 [pull]
-	rebase = true
+  rebase = true
 [init]
   defaultBranch = main
 [rerere]
-	enabled = true
+  enabled = true
