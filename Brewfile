@@ -23,6 +23,8 @@ brew "youtube-dl"
 brew "zoxide"
 brew "rustscan"
 brew "gping"
+brew "zellij"
+brew "fd"
 
 cask "docker"
 cask "dropbox"
