@@ -26,6 +26,7 @@ brew "rustscan"
 brew "gping"
 brew "zellij"
 brew "fd"
+brew "sd"
 
 cask "docker"
 cask "dropbox"
